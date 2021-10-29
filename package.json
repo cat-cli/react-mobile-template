@@ -1,0 +1,51 @@
+{
+  "name": "<%= projectName %>",
+  "private": true,
+  "scripts": {
+    "start": "cross-env PORT=8000 umi dev",
+    "build": "umi build",
+    "build:test": "umi build",
+    "build:uat": "umi build",
+    "build:prod": "umi build",
+    "lint": "eslint src --ext .ts,.tsx -c .eslintrc.js --fix",
+    "lint:strict": "eslint src --ext .ts,.tsx -c .eslintrc.js --no-ignore"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint:strict"
+    }
+  },
+  "dependencies": {
+    "@alitajs/hd": "^2.8.24",
+    "@umijs/preset-react": "^1.8.24",
+    "ahooks": "^2.10.11",
+    "antd-mobile": "^5.0.0-beta.13",
+    "antd-mobile-icons": "^0.2.2",
+    "axios": "^0.21.4",
+    "dayjs": "^1.10.7",
+    "dva-model-enhance": "^1.2.13",
+    "lint-staged": "^11.1.2",
+    "mockjs": "^1.1.0",
+    "oidc-react": "^1.5.1",
+    "path": "^0.12.7",
+    "postcss-preset-env": "^6.7.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "umi": "^3.5.19",
+    "umi-plugin-dva-enhance": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.24",
+    "@typescript-eslint/eslint-plugin": "^4.31.2",
+    "@umijs/fabric": "^2.8.0",
+    "@umijs/test": "^3.5.19",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-plugin-jest": "^24.4.2",
+    "eslint-plugin-react": "^7.26.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-unicorn": "^36.0.0",
+    "husky": "4.3.8",
+    "typescript": "^4.3.0"
+  }
+}
